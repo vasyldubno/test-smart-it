@@ -72,15 +72,7 @@ export const UserList: FC<UserListProps> = ({ data }) => {
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
                 return (
-                  <th
-                    key={header.id}
-                    colSpan={header.colSpan}
-                    style={
-                      {
-                        // padding: "0 20px",
-                      }
-                    }
-                  >
+                  <th key={header.id} colSpan={header.colSpan}>
                     {header.isPlaceholder ? null : (
                       <div style={{ display: "flex", flexDirection: "column" }}>
                         <div
@@ -119,14 +111,7 @@ export const UserList: FC<UserListProps> = ({ data }) => {
               <tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <td
-                      key={cell.id}
-                      style={
-                        {
-                          // padding: "0 20px"
-                        }
-                      }
-                    >
+                    <td key={cell.id}>
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
