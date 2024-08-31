@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { StateEnum, UserState } from "./types";
 import { getUsers } from "./thunk";
+import { StateEnum, UserState } from "./types";
 
 const initialState: UserState = { list: null, status: StateEnum.IDLE };
 
@@ -23,6 +23,7 @@ const slice = createSlice({
   },
   selectors: {
     selectUsers: (state) => state.list,
+    selectStatusUser: (state) => state.status,
   },
 });
 

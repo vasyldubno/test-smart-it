@@ -1,4 +1,4 @@
-import { UserService } from "@/api/userService/userService";
+import { UserService } from "../../api/userService/userService";
 import { UserType } from "@/shared/types";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
